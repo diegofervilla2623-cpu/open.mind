@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Mind | Streaming, publicidad, proyectos y eventos</title>
+<meta name="description" content="Open Mind: estudios y canales abiertos para tu programa de streaming, espacios publicitarios, proyectos y alquiler de equipos para eventos.">
+<meta property="og:title" content="Open Mind | Streaming, publicidad, proyectos y eventos">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFE600;--b:#1AA7FF;--g:#14D94A;--k:#151515;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Montserrat,Arial,sans-serif;font-weight:500;background:var(--w);color:var(--k);line-height:1.55;font-size:1.05rem;overflow-x:hidden}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--b);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative}
+section{padding:80px 0;position:relative;overflow:hidden}
+.dots{background-image:radial-gradient(var(--b) 3px,transparent 3.5px);background-size:22px 22px}
+.yel{background-color:var(--y)}.blk{background:var(--k);color:var(--w)}
+
+header{position:sticky;top:0;z-index:20;background:var(--k);border-bottom:5px solid var(--y)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;flex-wrap:wrap}
+.logo{font-family:Anton,sans-serif;font-size:1.7rem;color:var(--y);text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.logo svg{width:26px;height:26px;color:var(--b)}
+nav ul{list-style:none;display:flex;gap:6px 18px;flex-wrap:wrap}
+nav a{color:var(--w);text-decoration:none;font-weight:800;font-size:.92rem}
+nav a:hover{color:var(--y)}
+
+.btn{display:inline-block;background:var(--k);color:var(--y);font:800 1.1rem Montserrat,sans-serif;padding:16px 30px;border:4px solid var(--k);text-decoration:none;box-shadow:6px 6px 0 var(--b);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--b)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--b)}
+.btn.alt{background:var(--y);color:var(--k);box-shadow:6px 6px 0 var(--k)}
+.btn.alt:hover{box-shadow:9px 9px 0 var(--k)}
+.blk .btn{border-color:var(--y)}
+
+.bubble{background:var(--w);color:var(--k);border:4px solid var(--k);box-shadow:7px 7px 0 var(--k);padding:22px 26px;position:relative}
+.bubble::after{content:"";position:absolute;left:34px;bottom:-26px;border:13px solid transparent;border-top:22px solid var(--k);border-bottom:0}
+.bubble.b2{background:var(--b);box-shadow:7px 7px 0 var(--y)}
+.deco{position:absolute;width:70px;height:70px;stroke:var(--k);stroke-width:5;pointer-events:none}
+.photo{position:relative;border:5px solid var(--k);box-shadow:9px 9px 0 var(--b);min-height:280px;display:grid;place-items:center;text-align:center;padding:20px;font-weight:800;background-color:var(--w);background-image:radial-gradient(var(--k) 2px,transparent 2.5px);background-size:14px 14px}
+.photo span{background:var(--y);border:3px solid var(--k);padding:6px 12px}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+h1{font-size:clamp(3.2rem,10vw,7rem)}
+h1 em{font-style:normal;background:var(--k);color:var(--y);padding:0 .15em}
+h2{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:14px}
+.num{font-family:Anton,sans-serif;font-size:clamp(5rem,16vw,10rem);line-height:.8;color:var(--y);-webkit-text-stroke:4px var(--k);display:block}
+.blk .num{color:var(--b);-webkit-text-stroke:4px var(--y)}
+.yel .num{color:var(--w)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.lead{max-width:52ch;margin-bottom:26px}
+
+.hero{padding:70px 0 90px}
+.hero .bubble{margin:26px 0 40px;max-width:520px;font-weight:800;animation:pop .6s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes pop{from{transform:scale(.6) rotate(-4deg);opacity:0}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:56px}
+.tile{display:block;text-decoration:none;border:4px solid var(--k);padding:18px;font:400 1.5rem/1.05 Anton,sans-serif;text-transform:uppercase;box-shadow:6px 6px 0 var(--k);transition:transform .15s}
+.tile small{display:block;font:800 .85rem Montserrat,sans-serif;text-transform:none;margin-top:8px}
+.tile:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.t1{background:var(--b)}.t2{background:var(--w)}.t3{background:var(--g)}.t4{background:var(--b)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:44px}
+.card{background:var(--w);color:var(--k);border:4px solid var(--k);box-shadow:7px 7px 0 var(--k);padding:24px}
+.card h3{font-size:1.7rem;margin-bottom:8px}
+.card ul{margin:10px 0 0 18px}
+.price{font:400 2.8rem Anton,sans-serif;margin:6px 0}
+.price small{font:800 .9rem Montserrat,sans-serif}
+.blk .card{box-shadow:7px 7px 0 var(--y)}
+.c-y{background:var(--y)}.c-b{background:var(--b)}.c-g{background:var(--g)}
+.note{margin-top:26px;font-weight:800}
+
+form{display:grid;gap:16px;max-width:660px;margin-top:30px}
+label{display:grid;gap:6px;font-weight:800}
+input,select,textarea{font:500 1rem Montserrat,sans-serif;padding:12px;border:4px solid var(--k);background:var(--w);color:var(--k);width:100%}
+textarea{min-height:120px;resize:vertical}
+fieldset{border:4px solid var(--k);padding:12px 16px;background:var(--w)}
+legend{font-weight:800;padding:0 6px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 20px}
+.checks label{display:flex;align-items:center;gap:8px;font-weight:500}
+.checks input{width:auto}
+.msg{display:none;background:var(--g);border:4px solid var(--k);padding:14px 18px;font-weight:800}
+.msg.show{display:block;animation:pop .4s both}
+
+footer{background:var(--k);color:var(--w);padding:50px 0;border-top:5px solid var(--y)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer strong{font:400 1.8rem Anton,sans-serif;color:var(--y);text-transform:uppercase}
+.wa{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--g);color:var(--k);font-weight:800;padding:14px 20px;border:4px solid var(--k);box-shadow:5px 5px 0 var(--k);text-decoration:none}
+.wa:hover{transform:rotate(-3deg) scale(1.05)}
+
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+@media(max-width:800px){.split{grid-template-columns:1fr;gap:36px}.deco{width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 100 100"><polygon fill="currentColor" points="50,5 62,38 97,38 69,59 80,93 50,72 20,93 31,59 3,38 38,38"/></symbol>
+  <symbol id="bolt" viewBox="0 0 60 100"><polygon fill="currentColor" points="35,2 5,55 28,55 15,98 55,40 32,40 50,2"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio"><svg viewBox="0 0 100 100"><use href="#star"/></svg>Open Mind</a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#streaming">Streaming</a></li>
+        <li><a href="#advertising">Advertising</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="hero yel dots">
+  <svg class="deco" style="color:var(--b);right:6%;top:40px;width:90px;height:90px" viewBox="0 0 100 100"><use href="#star"/></svg>
+  <svg class="deco" style="color:var(--w);right:22%;bottom:150px;width:60px;height:100px" viewBox="0 0 60 100"><use href="#bolt"/></svg>
+  <div class="wrap">
+    <h1>Tu mente,<br><em>al aire.</em></h1>
+    <div class="bubble"><p>Estudios, canales abiertos, publicidad y equipos para eventos. Todo para que tu idea salga al mundo.</p></div>
+    <a class="btn" href="#projects">Presentar mi proyecto</a>
+    <a class="btn alt" href="#events">Cotizar equipos</a>
+    <div class="tiles">
+      <a class="tile t1" href="#streaming">01 Open Streaming<small>Estudios y canales</small></a>
+      <a class="tile t2" href="#advertising">02 Open Advertising<small>Espacios publicitarios</small></a>
+      <a class="tile t3" href="#projects">03 Open Projects<small>Envíanos tu demo</small></a>
+      <a class="tile t4" href="#events">04 Open Events<small>Alquiler de equipos</small></a>
+    </div>
+  </div>
+</section>
+
+<section id="streaming">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="num">01</span>
+        <h2>Open Streaming</h2>
+        <p class="lead">Espacios equipados y canales abiertos para que hagas tu programa de streaming. Llegas, te sientas y sales al aire.</p>
+        <a class="btn" href="#projects">Quiero mi programa</a>
+      </div>
+      <figure class="photo rv"><span>Aquí va tu foto del estudio</span><img src="img/estudio.jpg" alt="Estudio de streaming de Open Mind" onerror="this.remove()"></figure>
+    </div>
+    <div class="cards">
+      <div class="card c-y rv"><h3>Estudio de streaming</h3><p>Set con tres cámaras y mesa de mezcla.</p><ul><li>Hasta 6 personas en cámara</li><li>Iluminación incluida</li></ul></div>
+      <div class="card c-b rv"><h3>Cabina de podcast</h3><p>Espacio con acústica tratada.</p><ul><li>Hasta 4 micrófonos</li><li>Opción de video</li></ul></div>
+      <div class="card c-g rv"><h3>Canales abiertos</h3><p>Tu programa en nuestra grilla.</p><ul><li>Audiencia propia</li><li>Promoción cruzada</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="advertising" class="blk">
+  <svg class="deco" style="color:var(--y);right:5%;top:30px;stroke:var(--w);width:60px;height:100px" viewBox="0 0 60 100"><use href="#bolt"/></svg>
+  <div class="wrap">
+    <div class="split">
+      <figure class="photo rv"><span>Aquí va tu foto de publicidad</span><img src="img/publicidad.jpg" alt="Publicidad en pantalla durante un programa" onerror="this.remove()"></figure>
+      <div class="rv">
+        <span class="num">02</span>
+        <h2>Open Advertising</h2>
+        <p class="lead">Pon tu marca frente a la audiencia de todos los programas que se emiten en Open Mind. Precios por mes.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card rv"><h3>Mención en vivo</h3><div class="price">$ 1.500 <small>/ mes</small></div><p>El presentador menciona tu marca.</p><ul><li>4 menciones por semana</li><li>Un programa a elección</li></ul></div>
+      <div class="card c-y rv"><h3>Banner en pantalla</h3><div class="price">$ 3.000 <small>/ mes</small></div><p>Tu logo visible en toda la transmisión.</p><ul><li>Todos los programas</li><li>Incluye 4 menciones</li></ul></div>
+      <div class="card c-b rv"><h3>Programa auspiciado</h3><div class="price">$ 8.000 <small>/ mes</small></div><p>Eres el auspiciante principal.</p><ul><li>Tu nombre en el título</li><li>Segmento propio</li></ul></div>
+    </div>
+    <p class="note">Precios en pesos uruguayos, sin IVA. ¿Quieres un plan a medida? Escríbenos por WhatsApp.</p>
+  </div>
+</section>
+
+<section id="projects" class="yel dots">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="num">03</span>
+        <h2>Open Projects</h2>
+        <p class="lead">¿Tienes una idea de programa? Cuéntanos y envíanos un demo. Respondemos en menos de 48 horas.</p>
+      </div>
+      <figure class="photo rv"><span>Aquí va tu foto de proyectos</span><img src="img/proyectos.jpg" alt="Equipo grabando un programa" onerror="this.remove()"></figure>
+    </div>
+    <form id="formProyecto" class="rv">
+      <label>Nombre completo <input type="text" name="nombre" required></label>
+      <label>Correo electrónico <input type="email" name="correo" required></label>
+      <label>Nombre del proyecto <input type="text" name="proyecto" required></label>
+      <label>Tipo de programa
+        <select name="tipo" required>
+          <option value="">Elige una opción</option>
+          <option>Conversación o entrevistas</option>
+          <option>Noticias o actualidad</option>
+          <option>Música o entretenimiento</option>
+          <option>Educativo o cultural</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Cuéntanos sobre tu proyecto <textarea name="descripcion" required placeholder="De qué trata, a quién va dirigido y cada cuánto quieres emitir."></textarea></label>
+      <label>Enlace a tu demo <input type="url" name="demo" placeholder="https://"></label>
+      <label>O sube tu demo <input type="file" name="archivo" accept="video/*,audio/*"></label>
+      <button class="btn" type="submit">Enviar proyecto</button>
+      <p class="msg" role="status" id="msgProyecto">¡Recibimos tu proyecto! Te escribiremos al correo que indicaste.</p>
+    </form>
+  </div>
+</section>
+
+<section id="events">
+  <svg class="deco" style="color:var(--g);left:3%;top:30px;width:80px;height:80px" viewBox="0 0 100 100"><use href="#star"/></svg>
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="num">04</span>
+        <h2>Open Events</h2>
+        <p class="lead">Armamos el escenario de tu evento con equipos y personal. Elige lo que necesitas y pide tu cotización.</p>
+      </div>
+      <figure class="photo rv"><span>Aquí va tu foto de eventos</span><img src="img/eventos.jpg" alt="Evento con luces, tarima y sonido" onerror="this.remove()"></figure>
+    </div>
+    <div class="cards">
+      <div class="card c-y rv"><h3>Luces</h3><p>Iluminación de escenario y ambiente.</p></div>
+      <div class="card c-b rv"><h3>Tarimas</h3><p>Escenarios modulares de varios tamaños.</p></div>
+      <div class="card c-g rv"><h3>Sonido</h3><p>Parlantes, consolas y micrófonos.</p></div>
+      <div class="card c-y rv"><h3>DJ</h3><p>Con equipo propio y repertorio a pedido.</p></div>
+      <div class="card c-b rv"><h3>Animadores</h3><p>Para fiestas, eventos y lanzamientos.</p></div>
+    </div>
+    <form id="formCotizacion" class="rv">
+      <label>Nombre completo <input type="text" name="nombre" required></label>
+      <label>Correo electrónico o teléfono <input type="text" name="contacto" required></label>
+      <label>Fecha del evento <input type="date" name="fecha" required></label>
+      <label>Cantidad de invitados <input type="number" name="invitados" min="1" required></label>
+      <fieldset>
+        <legend>¿Qué necesitas?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="eq" value="Luces"> Luces</label>
+          <label><input type="checkbox" name="eq" value="Tarimas"> Tarimas</label>
+          <label><input type="checkbox" name="eq" value="Sonido"> Sonido</label>
+          <label><input type="checkbox" name="eq" value="DJ"> DJ</label>
+          <label><input type="checkbox" name="eq" value="Animadores"> Animadores</label>
+        </div>
+      </fieldset>
+      <label>Detalles del evento <textarea name="detalles" placeholder="Lugar, horario y cualquier detalle que nos ayude a cotizar."></textarea></label>
+      <button class="btn" type="submit">Pedir cotización</button>
+      <p class="msg" role="status" id="msgCotizacion">¡Recibimos tu pedido! Te enviaremos la cotización en menos de 24 horas.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div><strong>Open Mind</strong><br>Av. Ejemplo 1234, Montevideo<br>Lunes a sábado, 9:00 a 20:00 hs</div>
+    <div>contacto@openmind.example<br>WhatsApp: 099 123 456</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/59899123456?text=Hola,%20vengo%20desde%20la%20web%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n">WhatsApp</a>
+
+<script>
+// Aparición suave al hacer scroll
+document.documentElement.classList.add('js');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// Formularios (sin servidor: muestran confirmación)
+function enviar(formId,msgId){
+  document.getElementById(formId).addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById(msgId).classList.add('show');
+    e.target.reset();
+  });
+}
+enviar('formProyecto','msgProyecto');
+enviar('formCotizacion','msgCotizacion');
+</script>
+</body>
+</html>
